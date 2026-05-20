@@ -20,7 +20,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    fetch('/events.md')
+    fetch(`${import.meta.env.BASE_URL}events.md`)
       .then((res) => res.text())
       .then(applyMarkdown);
   }, [applyMarkdown]);
